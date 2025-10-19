@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaofan Zhang | AI Systems Engineer & Researcher</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font and clean background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6f9; /* Light grey/off-white background */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        /* Professional link styling */
+        .pro-link:hover {
+            color: #1e40af; /* Darker blue on hover */
+            text-decoration: underline;
+        }
+        /* Sticky sidebar on desktop - FIX APPLIED HERE */
+        .sticky-sidebar {
+            position: sticky; /* REQUIRED for the element to freeze */
+            top: 2.5rem; /* Matches the py-8/p-10 of the container for spacing */
+            max-height: calc(100vh - 5rem);
+            overflow-y: auto;
+        }
+        /* Style for active navigation items (if using JS for state, otherwise static) */
+        .nav-link {
+            transition: color 0.2s, background-color 0.2s;
+        }
+        .nav-link:hover {
+            background-color: #eff6ff; /* Blue-50 */
+            color: #1e40af; /* Blue-700 */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Global Container (Centered and Max Width) -->
+    <div class="container mx-auto px-4 py-8 sm:p-10 lg:p-12 max-w-7xl">
+
+        <!-- Main Content Grid (Responsive Layout) -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
+
+            <!-- Sidebar / Profile Card & Navigation (1/4 Width on Desktop) -->
+            <aside class="md:col-span-1">
+                <div class="bg-white p-6 rounded-xl shadow-lg sticky-sidebar flex flex-col space-y-6">
+                    <!-- Profile Card -->
+                    <div class="border-b border-gray-200 pb-4 mb-4">
+                        <!-- Profile Picture (UPDATED) -->
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-blue-500 overflow-hidden bg-gray-200">
+                            <img 
+                                src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=gG24R6MAAAAJ&citpid=1" 
+                                alt="Xiaofan Zhang Professional Photo"
+                                class="w-full h-full object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/128x128/94a3b8/ffffff?text=X.Z.'"
+                            >
+                        </div>
+                        <h1 class="text-2xl font-bold text-center mb-1">Xiaofan Zhang</h1>
+                        <p class="text-md text-gray-500 text-center">AI Systems Engineer & Researcher</p>
+                    </div>
+
+                    <!-- Explicit Navigation Menu -->
+                    <nav class="space-y-1 text-base font-medium">
+                        <a href="#about" class="nav-link block p-2 rounded-lg text-blue-700 bg-blue-50">About me</a>
+                        <a href="#news" class="nav-link block p-2 rounded-lg text-gray-700">News</a>
+                        <a href="#publications" class="nav-link block p-2 rounded-lg text-gray-700">Publications</a>
+                        <a href="#awards" class="nav-link block p-2 rounded-lg text-gray-700">Awards & Fellowships</a>
+                        <a href="#teaching" class="nav-link block p-2 rounded-lg text-gray-700">Service</a>
+                        <a href="#contact" class="nav-link block p-2 rounded-lg text-gray-700">Contact</a>
+                    </nav>
+
+                    <!-- Contact & External Links -->
+                    <div id="contact" class="border-t border-gray-200 pt-4 space-y-2 text-sm">
+                        <p class="text-lg font-semibold text-gray-700">Contact</p>
+                        <div class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:xiaofanz@google.com" class="text-blue-600 pro-link">xiaofanz [at] google</a>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 009-9 9 9 0 00-9-9m9 9H3m18 0a9 9 0 01-9 9 9 9 0 01-9-9" />
+                            </svg>
+                            <a href="https://scholar.google.com/citations?user=gG24R6MAAAAJ&hl=en&oi=ao" target="_blank" class="text-gray-600 pro-link">Google Scholar</a>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 4V20" />
+                            </svg>
+                            <a href="#" target="_blank" class="text-gray-600 pro-link">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area (3/4 Width on Desktop) -->
+            <main class="md:col-span-3 space-y-10">
+
+                <!-- About / Research Summary Section -->
+                <section id="about" class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-extrabold text-blue-700 mb-4 border-b pb-2">About Me</h2>
+                    <p class="mb-4 leading-relaxed">
+                        I am a Software Engineer at Google, working on large-scale AI systems to enable efficienct Gemini training and serving on TPUs. My research interests include AI Systems, Energy-efficient Computing, and Hardware/Software Co-design.
+                    </p>
+                    <p class="leading-relaxed">
+                        Before I joined Google, I received my Ph.D. from the University of Illinois Urbana-Champaign (UIUC) in 2022. I was a 
+                        <a href="https://grad.illinois.edu/news/xiaofan-zhang-csl-engineering-student-receives-2020-google-phd-fellowship"
+                        target="_blank"
+                        class="text-orange-600 transition duration-300 hover:text-orange-700 hover:underline"
+                        >
+                        Google Ph.D. Fellow</a>  and 
+                        <a href="https://mavis.grainger.illinois.edu/" 
+                        target="_blank"
+                        class="text-orange-600 transition duration-300 hover:text-orange-700 hover:underline"
+                        >
+                        Mavis Future Faculty Fellow</a>. My research was conducted under the supervision of
+                        <a href="https://dchen.ece.illinois.edu/" 
+                        target="_blank"
+                        class="text-orange-600 transition duration-300 hover:text-orange-700 hover:underline"
+                        >
+                        Prof. Deming Chen</a>, with close collaboration with 
+                        <a href="https://ece.illinois.edu/about/directory/faculty/w-hwu" 
+                        target="_blank"
+                        class="text-orange-600 transition duration-300 hover:text-orange-700 hover:underline"
+                        >
+                        Prof. Wen-mei Hwu</a> and 
+                        <a href="https://www.xlab-ub.com/" 
+                        target="_blank"
+                        class="text-orange-600 transition duration-300 hover:text-orange-700 hover:underline"
+                        >
+                        Prof. Junjun Xiong</a>. I completed my B.S. and M.S. at UESTC in Chengdu, China.
+                    </p>
+
+                </section>
+
+                <!-- News & Updates Section (Expanded and detailed) -->
+                <section id="news" class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-extrabold text-blue-700 mb-6 border-b pb-2"> News</h2>
+
+                    <div class="space-y-6">
+
+                        <!-- 1. PhD Defense (JUL 2022) - VISIBLE -->
+                        <div class="flex items-start space-x-4 border-l-4 border-blue-500 p-4 rounded-lg bg-blue-50 hover:shadow-lg transition duration-300">
+                            <div class="flex-shrink-0 w-16 text-center">
+                                <p class="text-xs font-bold text-blue-700">JUL</p>
+                                <p class="text-xl font-extrabold text-gray-800">2022</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-lg font-semibold leading-snug">Successfully defended my Ph.D. Thesis</p>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    My thesis, Efficient AI Hardware Acceleration, is now available for open access.
+                                </p>
+                                <div class="text-sm space-x-3 mt-2">
+                                    <a href="#" class="text-blue-600 hover:underline">[Thesis]</a>
+                                    <a href="#" class="text-blue-600 hover:underline">[Slides]</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 2. Google PhD Fellowship (OCT 2020) - VISIBLE -->
+                        <div class="flex items-start space-x-4 border-l-4 border-blue-500 p-4 rounded-lg bg-blue-50 hover:shadow-lg transition duration-300">
+                            <div class="flex-shrink-0 w-16 text-center">
+                                <p class="text-xs font-bold text-blue-700">OCT</p>
+                                <p class="text-xl font-extrabold text-gray-800">2020</p>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-lg font-semibold leading-snug">Xiaofan Receives 2020 Google Ph.D. Fellowship</p>
+                                <p class="text-sm text-gray-600 mt-1">
+                                    Awarded the prestigious Google Ph.D. Fellowship, recognized as the only recipient in the mobile computing area worldwide for exceptional and innovative research.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Toggle Link for Older News -->
+                        <a href="#" id="toggle-news" data-hidden="true" class="mt-4 inline-block text-blue-600 font-medium hover:text-blue-800 hover:underline transition duration-150">
+                            Show 3 more items &darr;
+                        </a>
+
+                        <!-- Hidden News Items Container -->
+                        <div id="hidden-news" class="hidden space-y-6">
+
+                            <!-- 3. DAC-SDC Double Championships (JUN 2019) -->
+                            <div class="flex items-start space-x-4 border border-gray-100 p-4 rounded-lg hover:shadow-md transition duration-300">
+                                <div class="flex-shrink-0 w-16 text-center">
+                                    <p class="text-xs font-bold text-blue-500">JUN</p>
+                                    <p class="text-xl font-extrabold text-gray-800">2019</p>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-lg font-semibold leading-snug">UIUC Wins the First DAC-SDC Double Championships</p>
+                                    <p class="text-sm text-gray-600 mt-1">
+                                        Two UIUC teams secured 1st place in the DAC'19 System Design Contest for both the GPU (SkyNet) and FPGA tracks, achieving high IoU and FPS on embedded platforms.
+                                    </p>
+                                    <a href="#" class="text-xs font-medium text-blue-600 hover:underline mt-2 inline-block">[Report]</a>
+                                </div>
+                            </div>
+                        
+                            <!-- 4. DNNBuilder Best Paper (NOV 2018) -->
+                            <div class="flex items-start space-x-4 border border-gray-100 p-4 rounded-lg hover:shadow-md transition duration-300">
+                                <div class="flex-shrink-0 w-16 text-center">
+                                    <p class="text-xs font-bold text-blue-500">NOV</p>
+                                    <p class="text-xl font-extrabold text-gray-800">2018</p>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-lg font-semibold leading-snug">DNNBuilder Receives IEEE/ACM William J. Mccalla ICCAD Best Paper Award</p>
+                                    <p class="text-sm text-gray-600 mt-1">
+                                        A huge honor for our paper, DNNBuilder, to receive the Best Paper Award at ICCAD, the premier conference for electronic design automation.
+                                    </p>
+                                    <div class="text-sm space-x-3 mt-2">
+                                        <a href="#" class="text-blue-600 hover:underline">[Paper]</a>
+                                        <a href="#" class="text-blue-600 hover:underline">[Project]</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 5. DAC'18 (JUN 2018) -->
+                            <div class="flex items-start space-x-4 border border-gray-100 p-4 rounded-lg hover:shadow-md transition duration-300">
+                                <div class="flex-shrink-0 w-16 text-center">
+                                    <p class="text-xs font-bold text-blue-500">JUN</p>
+                                    <p class="text-xl font-extrabold text-gray-800">2018</p>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-lg font-semibold leading-snug">iSmart2 Team Wins Design Contest at DAC'18</p>
+                                    <p class="text-sm text-gray-600 mt-1">
+                                        The iSmart2 team (UIUC + IBM + Inspirit IoT + Boeing) secured 3rd place in the DAC'18 System Design Contest for the FPGA category (out of 61 teams). Our object detection system ran efficiently on an embedded FPGA.
+                                    </p>
+                                    <a href="#" class="text-xs font-medium text-blue-600 hover:underline mt-2 inline-block">[Code]</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- End Hidden News Items Container -->
+                    </div>
+                </section>
+
+                <!-- Publications Section -->
+                <section id="publications" class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-extrabold text-blue-700 mb-4 border-b pb-2">Publications</h2>
+
+                    <!-- <p class="text-gray-600 italic mb-6">
+                        A full list of publications can be found on my Google Scholar profile.
+                    </p> -->
+
+                    <div class="space-y-6">
+                        
+                        <!-- 2024 (Visible by Default) -->
+                        <h3 class="text-2xl font-bold text-gray-700 border-b pb-1">2024</h3>
+                        <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                            <p class="font-semibold text-gray-800">TBA: Faster Large Language Model Training Using SSD-Based Activation Offloading</p>
+                            <p class="text-sm text-gray-600">Kun Wu*, Jeongmin Brian Park*, <span class="font-medium">Xiaofan Zhang*</span>, et al. (*equal contributors) <span class="font-medium text-gray-700">arXiv:2408.10013.</span></p>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                        </div>
+                        <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                            <p class="font-semibold text-gray-800">ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization</p>
+                            <p class="text-sm text-gray-600">Haoran You, Yipin Guo, Yichao Fu, Wei Zhou, Huihong Shi, <span class="font-medium">Xiaofan Zhang</span>, et al. <span class="font-medium text-gray-700">38th Annual Conference on Neural Information Processing Systems (NeurIPS), Dec. 2024.</span></p>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                        </div>
+                        <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                            <p class="font-semibold text-gray-800">New Solutions on LLM Acceleration, Optimization, and Application <span class="text-xs font-semibold text-purple-600 border border-purple-600 px-1 rounded ml-2">Invited</span></p>
+                            <p class="text-sm text-gray-600">Yingbing Huang, Jiaxin Wan, Hanchen Ye, et al. <span class="font-medium text-gray-700">61st Design Automation Conference (DAC), June 2024.</span></p>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                        </div>
+                        <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                            <p class="font-semibold text-gray-800">AutoAI2C: An Automated Hardware Generator for DNN Acceleration on both FPGA and ASIC</p>
+                            <p class="text-sm text-gray-600">Yongan Zhang, <span class="font-medium">Xiaofan Zhang</span>, et al. <span class="font-medium text-gray-700">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD).</span></p>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                        </div>
+                        
+                        <!-- Toggle Link for Older Publications -->
+                        <a href="#" id="toggle-publications" data-hidden="true" class="mt-4 inline-block text-blue-600 font-medium hover:text-blue-800 hover:underline transition duration-150">
+                            Show more publications &darr;
+                        </a>
+
+                        <!-- Older Publications Container (Initially Hidden) -->
+                        <div id="older-publications" class="hidden space-y-6">
+
+                            <!-- 2023 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2023</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">EH-DNAS: End-to-End Hardware-aware Differentiable Neural Architecture Search</p>
+                                <p class="text-sm text-gray-600">Qian Jiang*, <span class="font-medium">Xiaofan Zhang*</span>, et al. (*equal contributors) <span class="font-medium text-gray-700">ICML Workshop on Differentiable Almost Everything, July 2023.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Augmenting Hessians with Inter-Layer Dependencies for Mixed-Precision Post-Training Quantization</p>
+                                <p class="text-sm text-gray-600">Clemens Schaefer, Navid Lambert-Shirzad, <span class="font-medium">Xiaofan Zhang</span>, et al. <span class="font-medium text-gray-700">arXiv preprint arXiv:2306.04879.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Compilation and Optimizations for Efficient Machine Learning on Embedded Systems</p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Yao Chen, et al. <span class="font-medium text-gray-700">Book chapter in Embedded Machine Learning, Springer Nature.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+
+                            <!-- 2022 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2022</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">AutoDistill: an End-to-End Framework to Explore and Distill Hardware-Efficient Language Models</p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Zongwei Zhou, et al. <span class="font-medium text-gray-700">arXiv preprint: 2201.08539.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Exploring HW/SW Co-Design for Video Analysis on CPU-FPGA Heterogeneous Systems</p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Yuan Ma, et al. <span class="font-medium text-gray-700">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2022.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Algorithm/Accelerator Co-Design and Co-Search for Edge AI</p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Yuhong Li, et al. <span class="font-medium text-gray-700">IEEE Transactions on Circuits and Systems II, 2022.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            
+                            <!-- 2021 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2021</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">F-CAD: A Framework to Explore Hardware Accelerators for Codec Avatar Decoding</p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Dawei Wang, et al. <span class="font-medium text-gray-700">58th Design Automation Conference (DAC), Dec. 2021.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Scaling Up Hardware Accelerator Verification using A-QED with Functional Decomposition</p>
+                                <p class="text-sm text-gray-600">Saranyu Chattopadhyay, Florian Lonsing, et al. <span class="font-medium text-gray-700">21st Formal Methods in Computer-Aided Design (FMCAD), Oct. 2021.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Efficient Methods for Mapping Neural Machine Translator on FPGAs</p>
+                                <p class="text-sm text-gray-600">Qin Li*, <span class="font-medium">Xiaofan Zhang*</span>, et al. (*equal contributors) <span class="font-medium text-gray-700">IEEE Transactions on Parallel and Distributed Systems (TPDS), 2021.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            
+                            <!-- 2020 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2020</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 hover:bg-blue-100 transition duration-150">
+                                <p class="font-semibold text-gray-800">SkyNet: a Hardware-Efficient Method for Object Detection and Tracking on Embedded Systems <span class="text-xs font-semibold text-blue-700 border border-blue-700 px-1 rounded ml-2">DAC'19 Champion Design</span></p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Haoming Lu, et al. <span class="font-medium text-gray-700">Conference on Machine Learning and Systems (MLSys), Mar. 2020.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">DNNExplorer: A Framework for Modeling and Exploring a Novel Paradigm of FPGA-based DNN Accelerator</p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang*</span>, Hanchen Ye*, et al. (*equal contributors) <span class="font-medium text-gray-700">39th International Conference on Computer Aided Design (ICCAD), Nov. 2020.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">HybridDNN: A Framework for High-Performance Hybrid DNN Accelerator Design and Implementation</p>
+                                <p class="text-sm text-gray-600">Hanchen Ye, <span class="font-medium">Xiaofan Zhang</span>, et al. <span class="font-medium text-gray-700">57th Design Automation Conference (DAC), July 2020.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            
+                            <!-- 2019 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2019</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 hover:bg-yellow-100 transition duration-150">
+                                <p class="font-semibold text-gray-800">A Bi-Directional Co-Design Approach to Enable Deep Learning on IoT Devices <span class="text-xs font-semibold text-yellow-700 border border-yellow-700 px-1 rounded ml-2">Best Poster Award</span></p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Cong Hao, et al. <span class="font-medium text-gray-700">ICML Workshop on ODML-CDNNR, June 2019.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">FPGA/DNN Co-Design: An Efficient Design Methodology for IoT Intelligence on the Edge</p>
+                                <p class="text-sm text-gray-600">Cong Hao*, <span class="font-medium">Xiaofan Zhang*</span>, et al. (*equal contributors) <span class="font-medium text-gray-700">56th Design Automation Conference (DAC), June 2019.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Implementing Neural Machine Translation with Bi-Directional GRU and Attention Mechanism on FPGAs Using HLS</p>
+                                <p class="text-sm text-gray-600">Qin Li*, <span class="font-medium">Xiaofan Zhang*</span>, et al. (*equal contributors) <span class="font-medium text-gray-700">24th Asia and South Pacific Design Automation Conference (ASP-DAC), Jan. 2019.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            
+                            <!-- 2018 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2018</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 hover:bg-yellow-100 transition duration-150">
+                                <p class="font-semibold text-gray-800">DNNBuilder: an Automated Tool for Building High-Performance DNN Hardware Accelerators for FPGAs <span class="text-xs font-semibold text-yellow-700 border border-yellow-700 px-1 rounded ml-2">Best Paper Award</span></p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Junsong Wang, et al. <span class="font-medium text-gray-700">37th International Conference on Computer Aided Design (ICCAD), Nov. 2018.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes</p>
+                                <p class="text-sm text-gray-600">Yuhong Li, <span class="font-medium">Xiaofan Zhang</span>, Deming Chen. <span class="font-medium text-gray-700">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June 2018.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            
+                            <!-- 2017 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2017</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Machine Learning on FPGAs to Face the IoT Revolution <span class="text-xs font-semibold text-purple-600 border border-purple-600 px-1 rounded ml-2">Invited</span></p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang*</span>, Anand Ramachandran*, et al. (*equal contributors) <span class="font-medium text-gray-700">36th International Conference on Computer Aided Design (ICCAD), Nov. 2017.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+                            
+                            <!-- 2016 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2016</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Non-Blocking Testing for Network-on-Chip</p>
+                                <p class="text-sm text-gray-600">Letian Huang, Junshi Wang, et al. <span class="font-medium text-gray-700">IEEE Transactions on Computers, 2016.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+
+                            <!-- 2015 -->
+                            <h3 class="text-2xl font-bold text-gray-700 border-b pb-1 pt-4">2015</h3>
+                            <div class="mt-4 space-y-3 border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition duration-150">
+                                <p class="font-semibold text-gray-800">Fault-Resilient Routing Unit in NoCs</p>
+                                <p class="text-sm text-gray-600"><span class="font-medium">Xiaofan Zhang</span>, Ebrahimi Masoumeh, et al. <span class="font-medium text-gray-700">28th IEEE International System-on-Chip Conference (SOCC), Sep. 2015.</span></p>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">[PDF]</a>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!-- Publication List Ends Here -->
+
+                </section>
+
+                <!-- Awards Section (UPDATED WITH FULL LIST AND COLLAPSIBLE DETAILS) -->
+                <section id="awards" class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-extrabold text-blue-700 mb-4 border-b pb-2">Awards & Fellowships</h2>
+                    <div class="space-y-3">
+                        <!-- Top 5 Awards (Visible by Default) -->
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Google Gold Perfy Award</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2024, 2025</span>
+                        </div>
+
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Google Silver Perfy Award</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2023</span>
+                        </div>
+
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Google Ph.D. Fellowship</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2020, 2021</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">ACM Student Research Competition Winner Award (ICCAD)</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2021</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Mavis Future Faculty Fellowship (MF3)</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2021</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Rambus Computer Engineering Fellowship</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2021</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Sundaram Seshu International Student Fellowship</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2020</span>
+                        </div>
+                        
+                        <!-- Hidden Awards (Awards 6+) -->
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">1st Place Winner Award (GPU Track) DAC System Design Contest</h3>
+                                <p class="text-sm text-gray-600">52 teams participated worldwide.</p>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2019</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">1st Place Winner Award (FPGA Track) DAC System Design Contest</h3>
+                                <p class="text-sm text-gray-600">58 teams participated worldwide.</p>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2019</span>
+                        </div>
+
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Best Poster Award (ICML ODML-CDNNR Workshop)</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2019</span>
+                        </div>
+
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Best Paper Award (ICCAD)</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2018</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Best Poster Award (IBM AI Horizons Network)</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2018</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">3rd Place Winner Award (FPGA Track) DAC System Design Contest</h3>
+                                <p class="text-sm text-gray-600">61 teams participated worldwide.</p>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2018</span>
+                        </div>
+                        
+                        <!-- <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-700">Tang-Lixin Scholarship</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2015-2019</span>
+                        </div> -->
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Best Graduate Thesis Award</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2016</span>
+                        </div>
+
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">China National Scholarship</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2012, 2015</span>
+                        </div>
+
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">1st Class Graduate Scholarship (Top 10%)</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2013, 2014, 2015</span>
+                        </div>
+                        
+                        <div class="flex justify-between items-start border-l-4 border-yellow-500 pl-4 hidden hidden-award">
+                            <div>
+                                <h3 class="font-semibold text-md text-gray-700">Best Undergraduate Thesis Award</h3>
+                            </div>
+                            <span class="text-sm font-medium text-yellow-700">2013</span>
+                        </div>
+
+                        <!-- Show More Button -->
+                        <a href="#" id="toggle-awards" data-hidden="true" class="mt-4 inline-block text-blue-600 font-medium hover:text-blue-800 hover:underline transition duration-150">
+                            Show more &darr;
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Teaching & Service Section -->
+                <section id="teaching" class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-extrabold text-blue-700 mb-4 border-b pb-2">Service</h2>
+                    <!-- <p class="text-gray-600 italic mb-6">
+                        This section lists teaching, reviewing, and community service activities.
+                    </p> -->
+
+                    <div class="space-y-6">
+                        
+                        <!-- Technical Program Committee and Reviewer -->
+                        <div class="border-l-4 border-teal-400 pl-4">
+                            <h3 class="font-semibold text-xl text-gray-700 mb-2">Peer Reviewer</h3>
+                            
+                            <h4 class="font-medium text-md text-gray-600 mt-3">Journal Reviewer</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 ml-4 space-y-1">
+                                <li>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</li>
+                                <li>IEEE Transactions on Circuits and Systems Part II (TCAS-II)</li>
+                                <li>IEEE Embedded Systems Letters (ESL)</li>
+                                <li>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</li>
+                            </ul>
+
+                            <h4 class="font-medium text-md text-gray-600 mt-3">Conference Technical Program Committee / Reviewer</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-700 ml-4 space-y-1">
+                                <li>2025 International Symposium on Computer Architecture (ISCA) Workshop on Machine Learning for Computer Architecture and Systems (MLArchSys)</li>
+                                <li>2025 ACM/IEEE Design Automation Conference (DAC)</li>
+                                <li>2024 IEEE International Workshop on LLM-Aided Design (LAD)</li>
+                                <li>2023 - 2024 ACM/IEEE International Conference on Computer-Aided Design (ICCAD)</li>
+                                <li>2023 ACM/IEEE Supercomputing Conference (SC)</li>
+                                <li>2023 Great Lakes Symposium on VLSI (GLSVLSI)</li>
+                                <li>2023 Conference on Machine Learning and Systems (MLSys)</li>
+                                <li>2016 - 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays (FPGA)</li>
+                                <li>2018 - 2022 IEEE International Symposium On Field-Programmable Custom Computing Machines (FCCM)</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Session Chair / Judge -->
+                        <div class="border-l-4 border-teal-400 pl-4">
+                            <h3 class="font-semibold text-xl text-gray-700 mb-2">Session Chair / Competition Judge</h3>
+                            <ul class="list-disc list-inside text-sm text-gray-700 ml-4 space-y-1">
+                                <li><span class="font-medium">Technical Session Chair:</span> 2024 ICCAD: Architectural Mapping</li>
+                                <li><span class="font-medium">Technical Session Chair:</span> 2024 ICCAD: Applications and Architectures</li>
+                                <li><span class="font-medium">Technical Session Chair:</span> 2023 ICCAD: Sustainable AI Training at the Large and Tiny Scales</li>
+                                <li><span class="font-medium">Competition Judge:</span> 2023 ACM Student Research Competition at ICCAD</li>
+                                <li><span class="font-medium">Competition Judge:</span> 2023 Ph.D. Forum at FCCM</li>
+                                <li><span class="font-medium">Competition Judge:</span> 2022 ACM Student Research Competition at ICCAD</li>
+                            </ul>
+                        </div>
+
+                        <!-- Teaching Assistant -->
+                        <div class="border-l-4 border-teal-400 pl-4">
+                            <h3 class="font-semibold text-xl text-gray-700">Teaching</h3>
+                            <ul class="list-disc list-inside text-sm text-gray-700 ml-4 space-y-1">
+                                <li><span class="font-medium">Guest Lecturer:</span> ELEC 515: Embedded Machine Learning: FPGA for AI Inference (Rice University, Fall 2020)</li>
+                                    <p class="text-sm text-gray-600">Topic: Hardware Accelerator Design and Development</p>
+                                <li><span class="font-medium">Guest Lecturer:</span> IEEE Council on Electronic Design Automation (CEDA) Lecture Series</li>
+                                    <p class="text-sm text-gray-600">Topic: FPGA-based Accelerator Design for AI Inference</p>
+                                <li><span class="font-medium">Head Teaching Assistant:</span> ECE 498 ICC: IoT and Cognitive Computing (UIUC, Spring 2020)</li>
+                                <li><span class="font-medium">Teaching Assistant:</span> ECE 498 ICC: IoT and Cognitive Computing (UIUC, Spring 2019)</li>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Footer -->
+                <footer class="text-center text-gray-600 text-xs mt-10 p-4 border-t border-gray-300">
+                    <p>© 2025 Xiaofan Zhang, Built with a responsive, modern academic template.</p>
+                    <p>Site last updated: October 2025</p>
+                </footer>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- News Toggle Logic ---
+            const toggleNewsButton = document.getElementById('toggle-news');
+            const hiddenNewsContainer = document.getElementById('hidden-news');
+
+            if (toggleNewsButton && hiddenNewsContainer) {
+                toggleNewsButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const isHidden = hiddenNewsContainer.classList.contains('hidden');
+                    
+                    hiddenNewsContainer.classList.toggle('hidden');
+
+                    if (isHidden) {
+                        toggleNewsButton.innerHTML = 'Show less &uarr;'; // Up arrow
+                        toggleNewsButton.dataset.hidden = 'false';
+                    } else {
+                        // Dynamically update the count in the label
+                        const newsCount = hiddenNewsContainer.querySelectorAll('.flex').length;
+                        toggleNewsButton.innerHTML = `Show ${newsCount} older news items &darr;`; // Down arrow
+                        toggleNewsButton.dataset.hidden = 'true';
+                    }
+                    toggleNewsButton.scrollIntoView({ behavior: 'smooth' });
+                });
+                
+                // Set initial label text based on content count
+                const newsCount = hiddenNewsContainer.querySelectorAll('.flex').length;
+                if (newsCount > 0) {
+                     toggleNewsButton.innerHTML = `Show ${newsCount} more &darr;`;
+                }
+            }
+
+            // --- Awards Toggle Logic ---
+            const toggleAwardsButton = document.getElementById('toggle-awards');
+            const hiddenAwards = document.querySelectorAll('.hidden-award');
+
+            toggleAwardsButton.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const isHidden = toggleAwardsButton.dataset.hidden === 'true';
+
+                hiddenAwards.forEach(award => {
+                    award.classList.toggle('hidden');
+                });
+
+                if (isHidden) {
+                    toggleAwardsButton.innerHTML = 'Show less &uarr;'; // Up arrow
+                    toggleAwardsButton.dataset.hidden = 'false';
+                } else {
+                    toggleAwardsButton.innerHTML = 'Show more &darr;'; // Down arrow
+                    toggleAwardsButton.dataset.hidden = 'true';
+                }
+            });
+
+            // --- Publications Toggle Logic (NEW) ---
+            const togglePubsButton = document.getElementById('toggle-publications');
+            const olderPublications = document.getElementById('older-publications');
+
+            if (togglePubsButton && olderPublications) {
+                togglePubsButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const isHidden = olderPublications.classList.contains('hidden');
+
+                    olderPublications.classList.toggle('hidden');
+
+                    if (isHidden) {
+                        togglePubsButton.innerHTML = 'Show only recent publications &uarr;'; // Up arrow
+                        togglePubsButton.dataset.hidden = 'false';
+                    } else {
+                        togglePubsButton.innerHTML = 'Show more publications &darr;'; // Down arrow
+                        togglePubsButton.dataset.hidden = 'true';
+                    }
+                    // Scroll to the button to prevent jarring jump when content expands/collapses
+                    togglePubsButton.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
